@@ -17,7 +17,6 @@
 		6CC260F6256AD8F900613714 /* Preferences+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC260F5256AD8F900613714 /* Preferences+Extension.swift */; };
 		6CD35F53264FFFC6001F1344 /* SimplyCoreAudio in Frameworks */ = {isa = PBXBuildFile; productRef = 6CD35F52264FFFC6001F1344 /* SimplyCoreAudio */; };
 		6CD35F5626500008001F1344 /* MediaKeyTap in Frameworks */ = {isa = PBXBuildFile; productRef = 6CD35F5526500008001F1344 /* MediaKeyTap */; };
-		6CD35F5C2650003F001F1344 /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = 6CD35F5B2650003F001F1344 /* Preferences */; };
 		6CDA0FCF26485A8300F52125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDA0FCD26485A8300F52125 /* Main.storyboard */; };
 		8C1741852707B91100E88D53 /* InternetAccessPolicy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C1741842707B91100E88D53 /* InternetAccessPolicy.plist */; };
 		8C1741882707B91F00E88D53 /* InternetAccessPolicy.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C17418A2707B91F00E88D53 /* InternetAccessPolicy.strings */; };
@@ -49,6 +48,7 @@
 		AAB2F642273ED0C7004AB5A4 /* .github in Resources */ = {isa = PBXBuildFile; fileRef = AAB2F641273ED0C7004AB5A4 /* .github */; };
 		AAB2F644273ED0E9004AB5A4 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = AAB2F643273ED0E9004AB5A4 /* License.txt */; };
 		AACE5E2327050C63006C2A48 /* NSNotification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACE5E2227050C63006C2A48 /* NSNotification+Extension.swift */; };
+		AAD7DD342CAFF3D90062822F /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7DD332CAFF3D90062822F /* Settings */; };
 		AADB625A26BC196900DFFAA5 /* DisplayServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB625926BC196900DFFAA5 /* DisplayServices.framework */; };
 		F01B0699228221B7008E64DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01B0680228221B6008E64DB /* Localizable.strings */; };
 		F01B069F228221B7008E64DB /* SliderHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01B068F228221B7008E64DB /* SliderHandler.swift */; };
@@ -194,7 +194,7 @@
 				6CD35F53264FFFC6001F1344 /* SimplyCoreAudio in Frameworks */,
 				6CD35F5626500008001F1344 /* MediaKeyTap in Frameworks */,
 				AA9AE86F26B5BF3D00B6CA65 /* OSD.framework in Frameworks */,
-				6CD35F5C2650003F001F1344 /* Preferences in Frameworks */,
+				AAD7DD342CAFF3D90062822F /* Settings in Frameworks */,
 				AADB625A26BC196900DFFAA5 /* DisplayServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,9 +394,9 @@
 			packageProductDependencies = (
 				6CD35F52264FFFC6001F1344 /* SimplyCoreAudio */,
 				6CD35F5526500008001F1344 /* MediaKeyTap */,
-				6CD35F5B2650003F001F1344 /* Preferences */,
 				AA44E702270377C200E06865 /* KeyboardShortcuts */,
 				AA70817B27046B9800CC5625 /* Sparkle */,
+				AAD7DD332CAFF3D90062822F /* Settings */,
 			);
 			productName = MonitorControl.OSX;
 			productReference = 56754EAB1D9A4016007BCDC5 /* MonitorControl.app */;
@@ -427,8 +427,9 @@
 		56754EA31D9A4016007BCDC5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1610;
 				ORGANIZATIONNAME = MonitorControl;
 				TargetAttributes = {
 					56754EAA1D9A4016007BCDC5 = {
@@ -473,7 +474,7 @@
 			packageReferences = (
 				6CD35F51264FFFC6001F1344 /* XCRemoteSwiftPackageReference "SimplyCoreAudio" */,
 				6CD35F5426500008001F1344 /* XCRemoteSwiftPackageReference "MediaKeyTap" */,
-				6CD35F5A2650003F001F1344 /* XCRemoteSwiftPackageReference "Preferences" */,
+				6CD35F5A2650003F001F1344 /* XCRemoteSwiftPackageReference "Settings" */,
 				AA44E701270377C200E06865 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 				AA70817A27046B9800CC5625 /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
@@ -521,6 +522,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		28D1DE0C227FCFAF004CB494 /* [Format] Run SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 12;
 			files = (
 			);
@@ -539,6 +541,7 @@
 		};
 		28F6A5802283515F00A4ADCD /* Increase Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -557,6 +560,7 @@
 		};
 		28F6A5822283548F00A4ADCD /* Sync Version Numbers */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -575,6 +579,7 @@
 		};
 		6CB1BDB2253C7EBE00B52124 /* [Localization] Run BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 12;
 			files = (
 			);
@@ -589,10 +594,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which bartycrouch > /dev/null; then\n    bartycrouch update -x\n    bartycrouch lint -x\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
+			shellScript = "echo Skipping bartycrouch\n# export PATH=\"$PATH:/opt/homebrew/bin\"\n# if which bartycrouch > /dev/null; then\n#     bartycrouch update -x\n#     bartycrouch lint -x\n# else\n#     echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\n# fi\n";
 		};
 		F03A8DF01FFB9D4C0034DC27 /* [Lint] Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 12;
 			files = (
 			);
@@ -769,6 +775,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -830,6 +837,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -856,10 +864,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MonitorControl/MonitorControlDebug.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1179;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 7100;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 299YSU96J7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/**",
@@ -871,8 +881,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 4.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = me.guillaumeb.MonitorControl;
+				MARKETING_VERSION = 4.3.2;
+				PRODUCT_BUNDLE_IDENTIFIER = app.monitorcontrol.MonitorControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MonitorControl/Support/Bridging-Header.h";
@@ -891,10 +901,12 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1179;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 7100;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 299YSU96J7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/**",
@@ -906,8 +918,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 4.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = me.guillaumeb.MonitorControl;
+				MARKETING_VERSION = 4.3.2;
+				PRODUCT_BUNDLE_IDENTIFIER = app.monitorcontrol.MonitorControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MonitorControl/Support/Bridging-Header.h";
@@ -929,10 +941,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = MonitorControlHelper/MonitorControlHelper.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 631;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 7100;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 299YSU96J7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = MonitorControlHelper/Info.plist;
@@ -942,7 +956,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 4.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.guillaumeb.MonitorControlHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = app.monitorcontrol.MonitorControlHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.5;
@@ -958,10 +972,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = MonitorControlHelper/MonitorControlHelper.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 631;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 7100;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 299YSU96J7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = MonitorControlHelper/Info.plist;
@@ -971,7 +987,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 4.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.guillaumeb.MonitorControlHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = app.monitorcontrol.MonitorControlHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.5;
@@ -1027,12 +1043,12 @@
 				kind = branch;
 			};
 		};
-		6CD35F5A2650003F001F1344 /* XCRemoteSwiftPackageReference "Preferences" */ = {
+		6CD35F5A2650003F001F1344 /* XCRemoteSwiftPackageReference "Settings" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/Preferences";
+			repositoryURL = "https://github.com/sindresorhus/Settings";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.3.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 		AA44E701270377C200E06865 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
@@ -1064,11 +1080,6 @@
 			package = 6CD35F5426500008001F1344 /* XCRemoteSwiftPackageReference "MediaKeyTap" */;
 			productName = MediaKeyTap;
 		};
-		6CD35F5B2650003F001F1344 /* Preferences */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6CD35F5A2650003F001F1344 /* XCRemoteSwiftPackageReference "Preferences" */;
-			productName = Preferences;
-		};
 		AA44E702270377C200E06865 /* KeyboardShortcuts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AA44E701270377C200E06865 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
@@ -1078,6 +1089,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AA70817A27046B9800CC5625 /* XCRemoteSwiftPackageReference "Sparkle" */;
 			productName = Sparkle;
+		};
+		AAD7DD332CAFF3D90062822F /* Settings */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CD35F5A2650003F001F1344 /* XCRemoteSwiftPackageReference "Settings" */;
+			productName = Settings;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
